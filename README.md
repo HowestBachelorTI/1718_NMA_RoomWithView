@@ -1,6 +1,8 @@
 RoomWordsSample
 ================
 
+Adapted for Native Mobile Apps - Howest
+
 This repository contains the finished sample code for the
 Architecture Components codelab.
 
