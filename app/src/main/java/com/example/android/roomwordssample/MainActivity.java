@@ -68,13 +68,13 @@ public class MainActivity extends AppCompatActivity {
         });
 
         FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, NewWordActivity.class);
-                startActivityForResult(intent, NEW_WORD_ACTIVITY_REQUEST_CODE);
-            }
+
+        fab.setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this, NewWordActivity.class);
+            startActivityForResult(intent, NEW_WORD_ACTIVITY_REQUEST_CODE);
         });
+
+
     }
 
     @Override

@@ -65,7 +65,8 @@ public class WordRepository {
 
         @Override
         protected Void doInBackground(final Word... params) {
-            mAsyncTaskDao.insert(params[0]);
+            //mAsyncTaskDao.insert(params[0]);
+            mAsyncTaskDao.insertWords(params);
             return null;
         }
     }

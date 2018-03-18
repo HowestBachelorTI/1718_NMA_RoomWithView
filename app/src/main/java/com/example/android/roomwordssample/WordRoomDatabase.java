@@ -68,6 +68,8 @@ public abstract class WordRoomDatabase extends RoomDatabase {
         }
     };
 
+
+
     /**
      * Populate the database in the background.
      * If you want to start with more words, just add them.
@@ -85,11 +87,40 @@ public abstract class WordRoomDatabase extends RoomDatabase {
             // Start the app with a clean database every time.
             // Not needed if you only populate on creation.
             mDao.deleteAll();
+            Word[] words = new Word[] {
+                    new Word("Xamarin"),
+                    new Word(".Net Core"),
+                    new Word("Android Studio"),
+                    new Word("Java"),
+                    new Word("Python"),
+                    new Word("MVVM"),
+                    new Word("Adapter"),
+                    new Word("Repository"),
+                    new Word("Kotlin"),
+                    new Word("IIS"),
+                    new Word("C#"),
+                    new Word("Razor"),
+                    new Word("String"),
+                    new Word("Array"),
+                    new Word("Property"),
+                    new Word("MVC"),
+                    new Word("Resharper"),
+                    new Word("WPF"),
+                    new Word("Unity"),
+                    new Word("JavaFx"),
+                    new Word("Prism"),
+                    new Word("VsCode"),
+                    new Word("Inheritance"),
+                    new Word("Web API"),
+                    new Word("Javascript"),
+                    new Word("Ajax"),
+                    new Word("Json"),
+                    new Word("UML"),
+                    new Word("ERD"),
+                    new Word("SQL Server"),
+                    new Word("mySQL")};
+            mDao.insertWords(words);
 
-            Word word = new Word("Hello");
-            mDao.insert(word);
-            word = new Word("World");
-            mDao.insert(word);
             return null;
         }
     }
